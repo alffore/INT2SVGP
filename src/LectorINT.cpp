@@ -4,7 +4,9 @@
 
 using namespace std;
 
-
+/**
+*
+*/
 LectorINT::LectorINT(string sarchivo, vector<Poligonal>& vPol){
 	this->sarchivo=sarchivo;
     this->vPol=vPol;
