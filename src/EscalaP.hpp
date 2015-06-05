@@ -3,8 +3,12 @@
 
 #include <vector>
 #include <string>
+#include <algorithm>
 #include <math>
 
+
+#include "Poligonal.h"
+#include "Punto.h"
 
 using namespace std;
 
@@ -16,6 +20,16 @@ private:
 	int dimx;
 	int dimy;
 
+	double dimXP;
+	double dimYP;
+	double dimMP;
+
+	double escala;
+
+	double corx;
+	double cory;
+
+	int obtenDimPol();
 	void escalaPoligono(Poligonal& pol);
 
 

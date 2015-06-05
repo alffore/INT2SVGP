@@ -32,3 +32,6 @@ all: clean $(OBJ)
 	
 clean:
 	@rm -rfv *.o
+
+docs:
+	

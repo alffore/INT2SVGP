@@ -34,7 +34,7 @@ if (argc < 3) {
 c1=atoi(argv[2]);
 c2=atoi(argv[3]);
 dimx=atoi(argv[4]);
-dimy=atoi(argv[4]);
+dimy=atoi(argv[5]);
 
 
 cout << "Archivo INT: "<< argv[1]<<endl;
