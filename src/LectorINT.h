@@ -12,6 +12,8 @@
 
 #define DELIMITER       "|"
 
+
+
 using namespace std;
 
 
@@ -27,6 +29,9 @@ private:
 	string sarchivo;
 
 	vector<Poligonal> vPol;
+
+	int c1;
+	int c2;
 
 	void inicializador(void);
 	

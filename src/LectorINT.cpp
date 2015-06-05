@@ -7,7 +7,7 @@ using namespace std;
 /**
 *
 */
-LectorINT::LectorINT(string sarchivo, vector<Poligonal>& vPol){
+LectorINT::LectorINT(string sarchivo, vector<Poligonal>& vPol, int c1,int c2){
 	this->sarchivo=sarchivo;
     this->vPol=vPol;
 

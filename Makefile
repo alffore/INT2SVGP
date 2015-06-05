@@ -13,9 +13,9 @@ LIBS=
 
 OBJ= main.o \
 	Poligonal.o \
-	LectorINT.o
-	
-	
+	LectorINT.o \
+	EscalaP.o
+
 	
 
 DIR_SRC= ./src/
