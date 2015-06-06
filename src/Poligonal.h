@@ -3,7 +3,8 @@
 
 
 #include <vector>
-#include <algorithm>
+#include <string>
+
 
 #include "Punto.h"
 
@@ -16,11 +17,12 @@ class Poligonal {
 
 public:
 
-	vector<Punto> vp;
-	int ce;
-	int cm;
+	vector<string> vcad;
 
-	Poligonal(vector<Punto> vp);
+	vector<Punto> vp;
+
+
+	Poligonal(vector<Punto> vp,vector<string> vcad);
 
 };
 

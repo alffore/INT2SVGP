@@ -14,7 +14,8 @@ LIBS=
 OBJ= main.o \
 	Poligonal.o \
 	LectorINT.o \
-	EscalaP.o
+	EscalaP.o \
+	SalidaSVG.o
 
 	
 

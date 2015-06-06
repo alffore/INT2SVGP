@@ -2,7 +2,7 @@
 
 #include <cstdlib>
 #include <vector>
-#include <math>
+
 
 
 #include "Poligonal.h"

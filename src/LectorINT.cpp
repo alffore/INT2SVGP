@@ -7,7 +7,7 @@ using namespace std;
 /**
 *
 */
-LectorINT::LectorINT(string sarchivo, vector<Poligonal>& vPol, int c1,int c2){
+LectorINT::LectorINT(string sarchivo, vector<Poligonal>& vPol){
 	this->sarchivo=sarchivo;
     this->vPol=vPol;
 
@@ -26,7 +26,6 @@ void LectorINT::inicializador(void){
     
     miarch.open(sarchivo.c_str(), ifstream::in);
 
-	
 		while(getline(miarch,sline)){
 
             parser(sline);
@@ -56,12 +55,13 @@ void LectorINT::parser(string scad) {
         parserSPunto(vp, vc[2]);
         
         cout<<" #vertices: "<<vp.size()<<endl;
-        Poligonal auxPol(vp);
+        Poligonal auxPol(vp,vc);
 
 
         vPol.push_back(auxPol);
     }
 }
+
 
 /**
  * 
@@ -86,6 +86,7 @@ void LectorINT::parserSPunto(vector<Punto>& vP, const string & scad) {
         }
     }
 }
+
 
 /**
  * 
