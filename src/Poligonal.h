@@ -21,7 +21,6 @@ public:
 
 	vector<Punto> vp;
 
-
 	Poligonal(vector<Punto> vp,vector<string> vcad);
 
 };

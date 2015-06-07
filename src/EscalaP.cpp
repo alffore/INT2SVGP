@@ -41,12 +41,9 @@ void EscalaP::escalaPoligonal(Poligonal & pol){
 	vector<Punto> vp=pol.vp;
 
 	for (vector<Punto>::iterator it = pol.vp.begin(); it != pol.vp.end(); ++it) {
-        
-		double x=escala *((*it).x - xmin) + corx;
-		double y=-escala*((*it).y - ymin) + cory;
 
-		(*it).x=x;
-		(*it).y=y;
+		(*it).x=escala *((*it).x - xmin) + corx;
+		(*it).y=-escala*((*it).y - ymin) + cory;
 
     }
 
@@ -113,8 +110,6 @@ void EscalaP::obtenDimPol(Poligonal & pol, int cuenta){
 
 		if((*it).x>xmax)xmax=(*it).x;
 		if((*it).y>ymax)ymax=(*it).y;
-
-
 
 	}	
 

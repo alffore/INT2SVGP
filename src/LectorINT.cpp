@@ -7,9 +7,13 @@ using namespace std;
 /**
 *
 */
-LectorINT::LectorINT(string sarchivo, vector<Poligonal>& vPol){
+LectorINT::LectorINT(string sarchivo, vector<Poligonal>& vPol,int campo1,int campo2, int campov){
 	this->sarchivo=sarchivo;
     this->vPol=vPol;
+
+    this->campo1=campo1;
+    this->campo2=campo2;
+    this->campov=campov;
 
     this->inicializador();
 }
@@ -48,17 +52,22 @@ void LectorINT::parser(string scad) {
     split(vc, scad, DELIMITER);
 
     if (vc.size() > 1) {
-        cout << "Campos: "<<vc.size() << endl;
 
-        vector<Punto> vp;
+        int cam=atoi(vc[campo1].c_str());
 
-        parserSPunto(vp, vc[2]);
-        
-        cout<<" #vertices: "<<vp.size()<<endl;
-        Poligonal auxPol(vp,vc);
+        if(cam==campov || campov==0){
+            cout << "Campos: "<<vc.size() << endl;
+
+            vector<Punto> vp;
+
+            parserSPunto(vp, vc[2]);
+            
+            cout<<" #vertices: "<<vp.size()<<endl;
+            Poligonal auxPol(vp,vc);
 
 
-        vPol.push_back(auxPol);
+            vPol.push_back(auxPol);
+        }
     }
 }
 

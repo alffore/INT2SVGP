@@ -7,7 +7,7 @@ CC= g++ -c
 
 CLINKER= g++ -lm -o 
 
-CFLAGS= -O3 -Wall
+CFLAGS= -O2  -Wall
 
 LIBS=
 

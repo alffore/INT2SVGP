@@ -17,13 +17,14 @@ SalidaSVG::SalidaSVG(string sarchivo){
 }
 
 
-
+/**
+*
+*/
 void SalidaSVG::imprimePoligonales(vector<Poligonal>& vPol){
 
 	for(vector<Poligonal>::iterator it=vPol.begin();it!= vPol.end();++it){
 		imprimePoligonal(*it);
 	}
-
 
 }
 
