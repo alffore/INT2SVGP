@@ -7,15 +7,17 @@ using namespace std;
 /**
 *
 */
-LectorINT::LectorINT(string sarchivo, vector<Poligonal>& vPol,int campo1,int campo2, int campov){
+LectorINT::LectorINT(string sarchivo,int campo1,int campo2, int campov){
 	this->sarchivo=sarchivo;
-    this->vPol=vPol;
+    
 
     this->campo1=campo1;
     this->campo2=campo2;
     this->campov=campov;
 
     this->inicializador();
+
+
 }
 
 
@@ -65,10 +67,11 @@ void LectorINT::parser(string scad) {
             cout<<" #vertices: "<<vp.size()<<endl;
             Poligonal auxPol(vp,vc);
 
-
             vPol.push_back(auxPol);
         }
     }
+
+    
 }
 
 

@@ -1,6 +1,7 @@
 #ifndef ESCALAP_HPP
 #define ESCALAP_HPP
 
+#include <iostream>
 #include <vector>
 #include <string>
 #include <algorithm>
@@ -42,14 +43,14 @@ private:
 	double cory;
 
 	void obtenDimPols();
-	void obtenDimPol(Poligonal & pol, int cuenta);
+	void obtenDimPol(Poligonal &pol, int cuenta);
 
 	void escalaPoligonales();
 	void escalaPoligonal(Poligonal& pol);
 
 
 public:
-	EscalaP(vector<Poligonal>& vPol, int dimx, int dimy);
+	EscalaP(vector<Poligonal> &vPol, int dimx, int dimy);
 
 };
 

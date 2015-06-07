@@ -6,7 +6,7 @@ using namespace std;
 *
 *
 */
-EscalaP::EscalaP(vector<Poligonal>& vPol, int dimx, int dimy){
+EscalaP::EscalaP(vector<Poligonal> &vPol, int dimx, int dimy){
 
 	this->vPol=vPol;
 	this->dimx=dimx;
@@ -14,7 +14,6 @@ EscalaP::EscalaP(vector<Poligonal>& vPol, int dimx, int dimy){
 
 
 	obtenDimPols();
-
 	escalaPoligonales();
 
 }
@@ -36,7 +35,7 @@ void EscalaP::escalaPoligonales(){
 /**
 * @brief Metodo que escala la poligonal
 */
-void EscalaP::escalaPoligonal(Poligonal & pol){
+void EscalaP::escalaPoligonal(Poligonal &pol){
 
 	vector<Punto> vp=pol.vp;
 
@@ -60,7 +59,6 @@ void EscalaP::obtenDimPols(){
 	
 
 	for(std::vector<Poligonal>::iterator it=vPol.begin(); it !=vPol.end(); ++it){
-
 		obtenDimPol(*it,cuenta);
 		cuenta++;
 	}
@@ -85,13 +83,17 @@ void EscalaP::obtenDimPols(){
 	corx = (dimx / 2 - escala * ((xmax + xmin) / 2 - xmin));
     cory = (dimy / 2 + escala * ((ymax + ymin) / 2 - ymin));
 
+
+    cout<<"dimXP: "<<dimXP<<" dimYP: "<<dimYP<<" escala:"<<escala ;
+    cout<<" corx: "<< corx<< " cory: "<<cory<<endl;
+
 }
 
 
 /**
 *
 */
-void EscalaP::obtenDimPol(Poligonal & pol, int cuenta){
+void EscalaP::obtenDimPol(Poligonal &pol, int cuenta){
 	
 
 	for (vector<Punto>::iterator it = pol.vp.begin(); it != pol.vp.end(); ++it) {

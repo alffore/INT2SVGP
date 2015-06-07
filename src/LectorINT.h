@@ -21,14 +21,15 @@ class LectorINT{
 
 
 public:
- 	LectorINT(string sarchivo,vector<Poligonal>& vPol,int campo1,int campo2, int campov);
+
+	vector<Poligonal> vPol;
+
+ 	LectorINT(string sarchivo,int campo1,int campo2, int campov);
 
 
 private:
 
 	string sarchivo;
-
-	vector<Poligonal> vPol;
 
 	int campo1;
 	int campo2;

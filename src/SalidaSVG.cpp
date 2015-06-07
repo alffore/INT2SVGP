@@ -29,7 +29,6 @@ void SalidaSVG::imprimePoligonales(vector<Poligonal>& vPol){
 }
 
 
-
 /**
 *
 */
@@ -49,7 +48,7 @@ void SalidaSVG::imprimePoligonal(Poligonal& Pol){
 
 			fssal.precision(presicion);
 
-			fssal << "\"" << Pol.vcad[4]<< "\":\"";
+			fssal << "\"p" << Pol.vcad[3]<<"_"<<Pol.vcad[4]<< "\":\"";
 
 			fssal<< "M "<< fixed <<xa<<","<<ya<<" C";
 
