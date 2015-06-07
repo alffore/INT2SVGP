@@ -17,7 +17,7 @@ using namespace std;
 class EscalaP{
 
 private:
-	vector<Poligonal> vPol;
+	vector<Poligonal>* pvPol;
 
 	//dimensiones requeridas para el mapa en pixeles
 	int dimx;
@@ -50,7 +50,7 @@ private:
 
 
 public:
-	EscalaP(vector<Poligonal> &vPol, int dimx, int dimy);
+	EscalaP(vector<Poligonal>* pvPol, int dimx, int dimy);
 
 };
 

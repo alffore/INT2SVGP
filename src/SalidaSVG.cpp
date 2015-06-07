@@ -48,7 +48,9 @@ void SalidaSVG::imprimePoligonal(Poligonal& Pol){
 
 			fssal.precision(presicion);
 
-			fssal << "\"p" << Pol.vcad[3]<<"_"<<Pol.vcad[4]<< "\":\"";
+			int clave=atoi(Pol.vcad[3].c_str())*1000+atoi(Pol.vcad[4].c_str());
+
+			fssal << "\"p" <<clave<< "\":\"";
 
 			fssal<< "M "<< fixed <<xa<<","<<ya<<" C";
 
@@ -69,7 +71,7 @@ void SalidaSVG::imprimePoligonal(Poligonal& Pol){
 
 
 	if(cuenta>0){
-		fssal<<" z\""<<endl;
+		fssal<<" z\","<<endl;
 	}
 
 

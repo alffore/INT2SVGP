@@ -54,7 +54,7 @@ int main(int argc, char *argv[]){
 	cout << "Cantidad de poligonos recuperados: "<< lint.vPol.size() << endl;
 
 	//escalamos las poligonales
-	EscalaP escala(lint.vPol,dimx,dimy);
+	EscalaP escala(&lint.vPol,dimx,dimy);
 
 
 	//generamos la salida

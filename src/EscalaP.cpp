@@ -6,9 +6,9 @@ using namespace std;
 *
 *
 */
-EscalaP::EscalaP(vector<Poligonal> &vPol, int dimx, int dimy){
+EscalaP::EscalaP(vector<Poligonal>* pvPol, int dimx, int dimy){
 
-	this->vPol=vPol;
+	this->pvPol=pvPol;
 	this->dimx=dimx;
 	this->dimy=dimy;
 
@@ -24,8 +24,7 @@ EscalaP::EscalaP(vector<Poligonal> &vPol, int dimx, int dimy){
 */
 void EscalaP::escalaPoligonales(){
 
-	for(std::vector<Poligonal>::iterator it=vPol.begin(); it !=vPol.end(); ++it){
-
+	for(std::vector<Poligonal>::iterator it=pvPol->begin(); it != pvPol->end(); ++it){
 		escalaPoligonal(*it);
 	}
 
@@ -58,7 +57,7 @@ void EscalaP::obtenDimPols(){
 	int cuenta=0;
 	
 
-	for(std::vector<Poligonal>::iterator it=vPol.begin(); it !=vPol.end(); ++it){
+	for(std::vector<Poligonal>::iterator it=pvPol->begin(); it != pvPol->end(); ++it){
 		obtenDimPol(*it,cuenta);
 		cuenta++;
 	}
