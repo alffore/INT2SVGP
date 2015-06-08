@@ -1,0 +1,13 @@
+g++ -c -O2  -Wall  src/main.cpp
+g++ -c -O2  -Wall  src/Poligonal.cpp
+g++ -c -O2  -Wall  src/LectorINT.cpp
+g++ -c -O2  -Wall  src/EscalaP.cpp
+g++ -c -O2  -Wall  src/SalidaSVG.cpp
+src/SalidaSVG.cpp: En la función miembro ‘void SalidaSVG::imprimePoligonal(Poligonal&)’:
+src/SalidaSVG.cpp:41:9: aviso: se define la variable ‘x0’ pero no se usa [-Wunused-but-set-variable]
+  double x0=0;
+         ^
+src/SalidaSVG.cpp:42:9: aviso: se define la variable ‘y0’ pero no se usa [-Wunused-but-set-variable]
+  double y0=0;
+         ^
+g++ -lm -o  ./bin/int2svgp.exe main.o Poligonal.o LectorINT.o EscalaP.o SalidaSVG.o  -O2  -Wall

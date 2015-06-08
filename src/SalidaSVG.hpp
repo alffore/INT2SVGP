@@ -25,7 +25,9 @@ public:
 
 	SalidaSVG(string sarchivo);
 
-	void imprimePoligonales(vector<Poligonal>& vPol); 
+	void imprimePoliPathCB(vector<Poligonal>& vPol); 
+        
+        void imprimePoliPathL(vector<Poligonal>& vPol);
 
 	virtual ~SalidaSVG();
 
@@ -34,15 +36,16 @@ private:
 	string sarchivo;
 	ofstream fssal;
 
-	int presicion;
+	int precision;
 
 	void abreArchivo();
 
 	void cierraArchivo();
 
 
-	void imprimePoligonal(Poligonal& Pol);
+	void imprimePoliPathCB(Poligonal& Pol);
 
+        void imprimePoliPathL(Poligonal& Pol);
 
 	bool checaIgD(double d1,double d2);
 };

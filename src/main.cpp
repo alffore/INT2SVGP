@@ -63,8 +63,8 @@ int main(int argc, char *argv[]){
 
 
 
-	ssvg.imprimePoligonales(lint.vPol);
-	
+	//ssvg.imprimePoliPathCB(lint.vPol);
+	ssvg.imprimePoliPathL(lint.vPol);
 
 
 

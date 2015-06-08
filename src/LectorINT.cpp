@@ -5,44 +5,42 @@
 using namespace std;
 
 /**
-*
-*/
-LectorINT::LectorINT(string sarchivo,int campo1,int campo2, int campov){
-	this->sarchivo=sarchivo;
-    
+ *
+ */
+LectorINT::LectorINT(string sarchivo, int campo1, int campo2, int campov) {
+    this->sarchivo = sarchivo;
 
-    this->campo1=campo1;
-    this->campo2=campo2;
-    this->campov=campov;
+
+    this->campo1 = campo1;
+    this->campo2 = campo2;
+    this->campov = campov;
 
     this->inicializador();
 
 
 }
 
-
 /**
-*
-*/
-void LectorINT::inicializador(void){
+ *
+ */
+void LectorINT::inicializador(void) {
 
     string sline;
 
-	ifstream miarch;
-    
+    ifstream miarch;
+
     miarch.open(sarchivo.c_str(), ifstream::in);
 
-		while(getline(miarch,sline)){
+    while (getline(miarch, sline)) {
 
-            parser(sline);
+        parser(sline);
 
-		}
+    }
 
-	miarch.close();
-	
+    miarch.close();
+
 
 }
-
 
 /**
  * 
@@ -55,25 +53,24 @@ void LectorINT::parser(string scad) {
 
     if (vc.size() > 1) {
 
-        int cam=atoi(vc[campo1].c_str());
+        int cam = atoi(vc[campo1].c_str());
 
-        if(cam==campov || campov==0){
-            cout << "Campos: "<<vc.size() << endl;
+        if (cam == campov || campov == 0) {
+            cout << "Campos: " << vc.size() << endl;
 
             vector<Punto> vp;
 
             parserSPunto(vp, vc[2]);
-            
-            cout<<" #vertices: "<<vp.size()<<endl;
-            Poligonal auxPol(vp,vc);
+
+            cout << " #vertices: " << vp.size() << endl;
+            Poligonal auxPol(vp, vc);
 
             vPol.push_back(auxPol);
         }
     }
 
-    
-}
 
+}
 
 /**
  * 
@@ -91,14 +88,13 @@ void LectorINT::parserSPunto(vector<Punto>& vP, const string & scad) {
         if (tamv >= 2) {
             for (long int i = 0; i < tamv; i += 2) {
                 Punto p;
-                p.x=atof(vsc[i].c_str());
-                p.y=atof(vsc[i + 1].c_str());
+                p.x = atof(vsc[i].c_str());
+                p.y = atof(vsc[i + 1].c_str());
                 vP.push_back(p);
             }
         }
     }
 }
-
 
 /**
  * 
