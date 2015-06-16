@@ -3,8 +3,10 @@
 using namespace std;
 
 /**
- *
- *
+ * Constructor de maquina para escalar poligonos
+ * @param pvPol
+ * @param dimx
+ * @param dimy
  */
 EscalaP::EscalaP(vector<Poligonal>* pvPol, int dimx, int dimy) {
 
