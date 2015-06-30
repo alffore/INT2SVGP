@@ -34,5 +34,10 @@ all: clean $(OBJ)
 clean:
 	@rm -rfv *.o
 
-docs:
+docs: borradocs
+	doxygen INT2SVG.dox
+	
+borradocs:
+	@rm -rfv ./docs/*	
+	
 	
