@@ -58,7 +58,6 @@ int main(int argc, char *argv[]){
 
 
 	//generamos la salida
-
 	SalidaSVG ssvg(string(SPATH)+string(argv[4])+string(".jsvg"));
 
 
