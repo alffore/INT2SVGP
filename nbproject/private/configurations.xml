@@ -9,6 +9,8 @@
       <df name="src">
         <in>EscalaP.cpp</in>
         <in>EscalaP.hpp</in>
+        <in>GenCU.cpp</in>
+        <in>GenCU.h</in>
         <in>LectorINT.cpp</in>
         <in>LectorINT.h</in>
         <in>Poligonal.cpp</in>

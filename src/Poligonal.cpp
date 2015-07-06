@@ -8,4 +8,6 @@ Poligonal::Poligonal(vector<Punto> vp,vector<string> vcad){
 	
 	this->vp=vp;
 	this->vcad=vcad;
+        
+        sclave_uni="";
 }

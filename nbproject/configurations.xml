@@ -4,6 +4,8 @@
     <df root="." name="0">
       <df name="src">
         <in>EscalaP.cpp</in>
+        <in>GenCU.cpp</in>
+        <in>GenCU.h</in>
         <in>LectorINT.cpp</in>
         <in>Poligonal.cpp</in>
         <in>SalidaSVG.cpp</in>
@@ -50,6 +52,10 @@
       <item path="src/EscalaP.cpp" ex="false" tool="1" flavor2="0">
         <ccTool flags="0">
         </ccTool>
+      </item>
+      <item path="src/GenCU.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/GenCU.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="src/LectorINT.cpp" ex="false" tool="1" flavor2="0">
         <ccTool flags="0">

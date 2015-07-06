@@ -10,6 +10,7 @@
 #include "LectorINT.h"
 #include "EscalaP.hpp"
 #include "SalidaSVG.hpp"
+#include "GenCU.h"
 
 #define SPATH "/home/alfonso/devel/INTS_MEXICO/jsvg/"
 
@@ -56,6 +57,9 @@ int main(int argc, char *argv[]){
 	//escalamos las poligonales
 	EscalaP escala(&lint.vPol,dimx,dimy);
 
+        //identificamos de manera única
+        GenCU mgencu;        
+        mgencu.generaCUPol(lint.vPol);
 
 	//generamos la salida
 	SalidaSVG ssvg(string(SPATH)+string(argv[4])+string(".jsvg"));
