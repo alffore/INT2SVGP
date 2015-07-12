@@ -22,7 +22,7 @@ SalidaSVG::SalidaSVG(string sarchivo) {
 void SalidaSVG::imprimePoliPathCB(vector<Poligonal>& vPol) {
 
     for (vector<Poligonal>::iterator it = vPol.begin(); it != vPol.end(); ++it) {
-        imprimePoliPathCB(*it);
+        imprimePoligonoPathCB(*it);
     }
 
 }
@@ -30,7 +30,7 @@ void SalidaSVG::imprimePoliPathCB(vector<Poligonal>& vPol) {
 void SalidaSVG::imprimePoliPathL(vector<Poligonal>& vPol) {
 
     for (vector<Poligonal>::iterator it = vPol.begin(); it != vPol.end(); ++it) {
-        imprimePoliPathL(*it);
+        imprimePoligonoPathL(*it);
     }
 
 }
@@ -39,7 +39,7 @@ void SalidaSVG::imprimePoliPathL(vector<Poligonal>& vPol) {
  * 
  * @param Pol
  */
-void SalidaSVG::imprimePoliPathCB(Poligonal& Pol) {
+void SalidaSVG::imprimePoligonoPathCB(Poligonal& Pol) {
 
     int cuenta = 0;
 
@@ -89,7 +89,7 @@ void SalidaSVG::imprimePoliPathCB(Poligonal& Pol) {
 
 }
 
-void SalidaSVG::imprimePoliPathL(Poligonal& Pol) {
+void SalidaSVG::imprimePoligonoPathL(Poligonal& Pol) {
 
     int cuenta = 0;
 

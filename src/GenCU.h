@@ -16,22 +16,34 @@
 
 
 #include "Poligonal.h"
-
+#include "ClaveU.h"
 
 
 
 using namespace std;
 
 class GenCU {
+    
+    
+    
+    
 public:
-    GenCU();
-    GenCU(const GenCU& orig);
+    GenCU(string sarchivo,int campoId);
+
     virtual ~GenCU();
     
     void generaCUPol(vector<Poligonal>& vPol);
     
 private:
-
+    string sarchivo;
+    int campoId;
+   
+    
+    void escribeArchivo();
+    
+    int existeCU(int clave);
+    
+    vector<ClaveU> vcla;
 };
 
 #endif	/* GENCU_H */

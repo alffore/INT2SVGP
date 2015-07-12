@@ -58,7 +58,7 @@ int main(int argc, char *argv[]){
 	EscalaP escala(&lint.vPol,dimx,dimy);
 
         //identificamos de manera única
-        GenCU mgencu;        
+        GenCU mgencu(string(SPATH)+string(argv[4])+string(".jsvg"),cv);        
         mgencu.generaCUPol(lint.vPol);
 
 	//generamos la salida

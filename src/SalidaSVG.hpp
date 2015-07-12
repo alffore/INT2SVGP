@@ -43,9 +43,9 @@ private:
 	void cierraArchivo();
 
 
-	void imprimePoliPathCB(Poligonal& Pol);
+	void imprimePoligonoPathCB(Poligonal& Pol);
 
-        void imprimePoliPathL(Poligonal& Pol);
+        void imprimePoligonoPathL(Poligonal& Pol);
 
 	bool checaIgD(double d1,double d2);
 };
