@@ -26,15 +26,15 @@ GenCU::~GenCU() {
 
 /**
  * 
- * @param vPol
+ * @param pvPol
  */
-void GenCU::generaCUPol(vector<Poligonal>& vPol) {
-
+void GenCU::generaCUPol(vector<Poligonal>* pvPol) {
+    cout << "DEBUG: generaCUPol"<<endl;
     int valor;
     int cuenta;
 
-    for (vector<Poligonal>::iterator it = vPol.begin(); it != vPol.end(); ++it) {
-
+    for (vector<Poligonal>::iterator it = pvPol->begin(); it != pvPol->end(); ++it) {       
+        
         valor = atoi((it->vcad[campoId]).c_str());
 
         cuenta = existeCU(valor);
@@ -43,6 +43,7 @@ void GenCU::generaCUPol(vector<Poligonal>& vPol) {
         ss << atoi(it->vcad[3].c_str())*1000 + valor << "-" << cuenta;
 
         it->sclave_uni = ss.str();
+        
     }
 }
 

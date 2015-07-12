@@ -53,6 +53,7 @@ void EscalaP::escalaPoligonal(Poligonal &pol) {
  */
 void EscalaP::obtenDimPols() {
 
+    cout << "DEBUG: obtenDimPols"<<endl;
     int cuenta = 0;
 
 

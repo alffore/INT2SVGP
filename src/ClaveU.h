@@ -8,6 +8,11 @@
 #ifndef CLAVEU_H
 #define	CLAVEU_H
 
+
+
+using namespace std;
+
+
 class ClaveU {
 public:
     int clave;

@@ -58,8 +58,8 @@ int main(int argc, char *argv[]){
 	EscalaP escala(&lint.vPol,dimx,dimy);
 
         //identificamos de manera única
-        GenCU mgencu(string(SPATH)+string(argv[4])+string(".bdrep"),cv);        
-        mgencu.generaCUPol(lint.vPol);
+        GenCU mgencu(string(SPATH)+string(argv[4])+string(".bdrep"),c2);        
+       mgencu.generaCUPol(&lint.vPol);
         mgencu.escribeArchivo();
 
 	//generamos la salida

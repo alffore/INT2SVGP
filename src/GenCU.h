@@ -23,27 +23,23 @@
 using namespace std;
 
 class GenCU {
-    
-    
-    
-    
 public:
-    GenCU(string sarchivo,int campoId);
+    GenCU(string sarchivo, int campoId);
 
     virtual ~GenCU();
-    
-    void generaCUPol(vector<Poligonal>& vPol);
+
+    void generaCUPol(vector<Poligonal>* pvPol);
     void escribeArchivo();
+    
+    
 private:
     string sarchivo;
     int campoId;
-   
-    
-    
-    
-    int existeCU(int clave);
-    
     vector<ClaveU> vcla;
+
+    int existeCU(int clave);
+
+
 };
 
 #endif	/* GENCU_H */
