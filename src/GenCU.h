@@ -33,13 +33,13 @@ public:
     virtual ~GenCU();
     
     void generaCUPol(vector<Poligonal>& vPol);
-    
+    void escribeArchivo();
 private:
     string sarchivo;
     int campoId;
    
     
-    void escribeArchivo();
+    
     
     int existeCU(int clave);
     

@@ -16,7 +16,8 @@ OBJ= main.o \
 	LectorINT.o \
 	EscalaP.o \
 	SalidaSVG.o \
-	GenCU.o
+	GenCU.o \
+	ClaveU.o
 
 	
 

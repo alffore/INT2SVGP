@@ -7,6 +7,8 @@
       <df name="docs">
       </df>
       <df name="src">
+        <in>ClaveU.cpp</in>
+        <in>ClaveU.h</in>
         <in>EscalaP.cpp</in>
         <in>EscalaP.hpp</in>
         <in>GenCU.cpp</in>

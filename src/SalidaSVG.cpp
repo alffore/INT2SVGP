@@ -60,9 +60,9 @@ void SalidaSVG::imprimePoligonoPathCB(Poligonal& Pol) {
 
             fssal.precision(precision);
 
-            int clave = atoi(Pol.vcad[3].c_str())*1000 + atoi(Pol.vcad[4].c_str());
+           // int clave = atoi(Pol.vcad[3].c_str())*1000 + atoi(Pol.vcad[4].c_str());
 
-            fssal << "\"" << clave << "\":\"";
+            fssal << "\"" << Pol.sclave_uni << "\":\"";
 
             fssal << "M " << fixed << xa << "," << ya << " C";
 
@@ -106,9 +106,9 @@ void SalidaSVG::imprimePoligonoPathL(Poligonal& Pol) {
 
             fssal.precision(precision);
 
-            int clave = atoi(Pol.vcad[3].c_str())*1000 + atoi(Pol.vcad[4].c_str());
+           // int clave = atoi(Pol.vcad[3].c_str())*1000 + atoi(Pol.vcad[4].c_str());
 
-            fssal << "\"" << clave << "\":\"";
+            fssal << "\"" << Pol.sclave_uni << "\":\"";
 
             fssal << "M " << fixed << xa << " " << ya << " ";
 

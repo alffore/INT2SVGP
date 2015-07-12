@@ -9,14 +9,17 @@
 
 #include "GenCU.h"
 
+/**
+ * 
+ * @param sarchivo
+ * @param campoId
+ */
 GenCU::GenCU(string sarchivo, int campoId) {
 
     this->sarchivo = sarchivo;
     this->campoId = campoId;
 
-    
 }
-
 
 GenCU::~GenCU() {
 }
@@ -32,10 +35,10 @@ void GenCU::generaCUPol(vector<Poligonal>& vPol) {
 
     for (vector<Poligonal>::iterator it = vPol.begin(); it != vPol.end(); ++it) {
 
-
         valor = atoi((it->vcad[campoId]).c_str());
 
         cuenta = existeCU(valor);
+
         stringstream ss;
         ss << atoi(it->vcad[3].c_str())*1000 + valor << "-" << cuenta;
 
@@ -50,10 +53,19 @@ void GenCU::escribeArchivo() {
     ofstream fssal;
     fssal.open(sarchivo.c_str());
 
+    for (vector<ClaveU>::iterator it = vcla.begin(); it != vcla.end(); ++it) {
+        fssal << it->clave << "|" << it->cantidad << endl;
+    }
 
     fssal.close();
 }
 
+/**
+ * Metodo que determina si existe una clave regresando la posición acumulada de la actual clave, en su caso crea al objeto ClaveU
+ * @param clave
+ * @return La cantidad de veces que exite la clave
+ * @see ClaveU
+ */
 int GenCU::existeCU(int clave) {
 
     if (vcla.size() == 0) {
@@ -67,12 +79,10 @@ int GenCU::existeCU(int clave) {
         if (it->clave == clave) {
             it->cantidad++;
             return it->cantidad;
-        } else {
-            ClaveU caux(clave);
-            vcla.push_back(caux);
-            return caux.cantidad;
         }
     }
 
-    return 0;
+    ClaveU caux(clave);
+    vcla.push_back(caux);
+    return caux.cantidad;
 }
