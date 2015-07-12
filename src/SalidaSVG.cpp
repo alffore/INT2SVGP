@@ -5,12 +5,19 @@ using namespace std;
 /**
  *
  */
-SalidaSVG::SalidaSVG(string sarchivo) {
+SalidaSVG::SalidaSVG(string sarchivo, int ce) {
 
 
     this->sarchivo = sarchivo;
 
     precision = 0;
+    this->ce = ce;
+
+    stringstream ss;
+    ss << ce;
+    this->sarchivo += string(ss.str());
+
+    this->sarchivo += string(".jsvg");
 
     abreArchivo();
 
@@ -27,6 +34,10 @@ void SalidaSVG::imprimePoliPathCB(vector<Poligonal>& vPol) {
 
 }
 
+/**
+ * 
+ * @param vPol
+ */
 void SalidaSVG::imprimePoliPathL(vector<Poligonal>& vPol) {
 
     for (vector<Poligonal>::iterator it = vPol.begin(); it != vPol.end(); ++it) {
@@ -36,7 +47,7 @@ void SalidaSVG::imprimePoliPathL(vector<Poligonal>& vPol) {
 }
 
 /**
- * 
+ * Metodo que pinta curvas de Bezier
  * @param Pol
  */
 void SalidaSVG::imprimePoligonoPathCB(Poligonal& Pol) {
@@ -60,8 +71,6 @@ void SalidaSVG::imprimePoligonoPathCB(Poligonal& Pol) {
 
             fssal.precision(precision);
 
-           // int clave = atoi(Pol.vcad[3].c_str())*1000 + atoi(Pol.vcad[4].c_str());
-
             fssal << "\"" << Pol.sclave_uni << "\":\"";
 
             fssal << "M " << fixed << xa << "," << ya << " C";
@@ -83,12 +92,16 @@ void SalidaSVG::imprimePoligonoPathCB(Poligonal& Pol) {
 
 
     if (cuenta > 0) {
-        fssal << " z\"," << endl;
+        fssal << " z\"" << endl;
     }
 
 
 }
 
+/**
+ * 
+ * @param Pol
+ */
 void SalidaSVG::imprimePoligonoPathL(Poligonal& Pol) {
 
     int cuenta = 0;
@@ -106,11 +119,9 @@ void SalidaSVG::imprimePoligonoPathL(Poligonal& Pol) {
 
             fssal.precision(precision);
 
-           // int clave = atoi(Pol.vcad[3].c_str())*1000 + atoi(Pol.vcad[4].c_str());
-
             fssal << "\"" << Pol.sclave_uni << "\":\"";
 
-            fssal << "M " << fixed << xa << " " << ya << " ";
+            fssal << "M " << fixed << xa << " " << ya << "";
 
         }
 
@@ -129,7 +140,7 @@ void SalidaSVG::imprimePoligonoPathL(Poligonal& Pol) {
 
 
     if (cuenta > 0) {
-        fssal << " z\"," << endl;
+        fssal << " z\"" << endl;
     }
 
 

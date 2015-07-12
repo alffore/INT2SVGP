@@ -16,32 +16,29 @@
 
 using namespace std;
 
-
-class LectorINT{
-
-
+class LectorINT {
 public:
 
-	vector<Poligonal> vPol;
+    vector<Poligonal> vPol;
 
- 	LectorINT(string sarchivo,int campo1,int campo2, int campov);
+    LectorINT(string sarchivo, int campo1, int campo2, int campov);
 
 
 private:
 
-	string sarchivo;
+    string sarchivo;
 
-	int campo1;
-	int campo2;
-	int campov;
+    int campo1;
+    int campo2;
+    int campov;
 
-	void inicializador(void);
-	
-	void parser(string scad);
+    void inicializador(void);
 
-	void split(vector<string>& theStringVector, const string& theString, const string& theDelimiter);
-	
-	void parserSPunto(vector<Punto>& vP, const string & scad);	
+    void parser(string scad);
+
+    void split(vector<string>& theStringVector, const string& theString, const string& theDelimiter);
+
+    void parserSPunto(vector<Punto>& vP, const string & scad);
 
 };
 

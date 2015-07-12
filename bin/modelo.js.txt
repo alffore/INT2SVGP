@@ -1,0 +1,19 @@
+(function ($) {
+    $.extend(true, $.fn.mapael,
+            {
+                maps: {
+                    e%%CE%%: {
+                        width: %%DIMX%%,
+                        height: %%DIMY%%,
+                        getCoords: function (lat, lon) {
+
+                            return {x: lat, y: lon};
+                        },
+                        elems: {
+%%PATHS%%
+                        }
+                    }
+                }
+            }
+    );
+})(jQuery);
