@@ -13,4 +13,10 @@ echo "Estado: "$i
 
 php ./genera_mapael.php $PATH_SAL $i $DIMX $DIMY
 
+
+
 done
+
+
+cd $PATH_SAL
+find ./ -size 0b -delete

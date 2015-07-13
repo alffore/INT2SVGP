@@ -55,7 +55,9 @@ void GenCU::escribeArchivo() {
     fssal.open(sarchivo.c_str());
 
     for (vector<ClaveU>::iterator it = vcla.begin(); it != vcla.end(); ++it) {
-        fssal << it->clave << "|" << it->cantidad << endl;
+        if(it->cantidad>1){
+            fssal << it->clave << "|" << it->cantidad << endl;
+        }
     }
 
     fssal.close();

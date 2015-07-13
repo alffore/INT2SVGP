@@ -2,8 +2,8 @@
 
 //codigo básico para generar el script "estático base de Mapael"
 
-print_r($argv);
-
+//print_r($argv);
+echo "Creación del Script de Mapael\n";
 
 $archivo_sal = $argv[1] . $argv[2] . ".js";
 
