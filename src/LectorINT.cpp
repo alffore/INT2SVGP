@@ -39,7 +39,7 @@ void LectorINT::inicializador(void) {
 
     miarch.close();
 
-
+    sort(vPol.begin(),vPol.end(),LectorINT::ordenadorP);
 }
 
 /**
@@ -116,4 +116,16 @@ void LectorINT::split(vector<string>& theStringVector, const string& theString, 
         start = ((end > (string::npos - theDelimiter.size()))
                 ? string::npos : end + theDelimiter.size());
     }
+}
+
+/**
+ * 
+ * @param p1
+ * @param p2
+ * @return 
+ */
+bool LectorINT::ordenadorP(const Poligonal& p1, const Poligonal& p2){
+    
+   return (p1.vp.size() > p2.vp.size());
+    
 }

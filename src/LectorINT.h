@@ -6,6 +6,7 @@
 #include <fstream>
 #include <vector>
 #include <cstdlib>
+#include <algorithm>
 
 
 #include "Poligonal.h"
@@ -40,6 +41,8 @@ private:
 
     void parserSPunto(vector<Punto>& vP, const string & scad);
 
+    
+    static bool ordenadorP(const Poligonal & p1, const Poligonal& p2);
 };
 
 #endif
