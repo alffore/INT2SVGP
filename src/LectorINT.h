@@ -42,7 +42,7 @@ private:
     void parserSPunto(vector<Punto>& vP, const string & scad);
 
     
-    static bool ordenadorP(const Poligonal & p1, const Poligonal& p2);
+    static bool ordenadorP(const Poligonal& p1, const Poligonal& p2);
 };
 
 #endif

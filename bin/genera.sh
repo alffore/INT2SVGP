@@ -9,7 +9,7 @@ for i in {1..32}
 do
 echo "Estado: "$i
 
-./int2svgp.exe $PATH_BASE/Municipios_2013.int 3 4 $i $DIMX $DIMY $PATH_SAL
+./int2svgp.exe $PATH_BASE/mgm2013v6_2.int 3 4 $i $DIMX $DIMY $PATH_SAL
 
 php ./genera_mapael.php $PATH_SAL $i $DIMX $DIMY
 
