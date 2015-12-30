@@ -10,7 +10,7 @@ SalidaSVG::SalidaSVG(string sarchivo, int ce) {
 
     this->sarchivo = sarchivo;
 
-    precision = 0;
+    precision = 2;
     this->ce = ce;
 
     stringstream ss;
