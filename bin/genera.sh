@@ -2,8 +2,8 @@
 
 PATH_BASE="/home/alfonso/devel/INTS_MEXICO/"
 PATH_SAL=$PATH_BASE"jsvg/"
-DIMX=970
-DIMY=950
+DIMX=1000
+DIMY=800
 
 for i in {1..32}
 do
